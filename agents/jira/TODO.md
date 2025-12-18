@@ -5,3 +5,4 @@
 - [ ] **Ticket MYD-705:** "Upgrade docker local setup for oauth backend server" - *Created on 2022-09-19, status 'To Do'.*
 - [ ] **Ticket MYD-729:** "Unit testing for Resources app" - *Created on 2022-09-21, status 'To Do'.*
 - [ ] **Ticket MYD-730:** "[FEATURE] Wordpress Tags Integration" - *Created on 2022-09-21, status 'To Do'.*
+- [x] **Ticket MYD-1583:** "todo: add logging to acuity log on session booking notifs together with the details" - *Completed and assigned to Boaz Sze, story point estimate 7.*
