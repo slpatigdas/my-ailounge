@@ -1,5 +1,6 @@
 # AGENTS.md
 
+- do not delete files
 - Be deterministic when possible
 - Declare intent before acting
 - Explain reasoning briefly
