@@ -1,4 +1,3 @@
-
 # 🚦 Priority Lane
 
 - [Warp Docs](https://docs.warp.dev/) - Official Warp documentation (Agentic Development Environment, Warp AI, agents, Warp Drive).  
@@ -26,7 +25,7 @@
 
 # 📰 Articles
 
-- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-AI-agents)
 
 # 🗂️ MCPs
 
@@ -41,6 +40,7 @@
 
 - [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects?tab=readme-ov-file) - Collection of AI agent use cases across industries.
 - [boazcstrike's list](https://github.com/boazcstrike/boazcstrike/blob/main/github-repos.md)
+- [seed bytedance](https://seed.bytedance.com/en/blog/the-doubao-seed-team-open-sources-new-benchmark-for-code-large-models-covering-over-11-real-world-programming-scenarios-for-the-first-time)
 
 # 🛡️ Security
 
@@ -51,3 +51,9 @@
 
 - [Excalidraw](https://excalidraw.com/) - Collaborative diagramming tool.
 - [Why I switched from Claude Code to Warp](https://levelup.gitconnected.com/why-i-switched-from-claude-code-to-warp-920ab7fcef8b)
+
+# 💸 Pricing & Cost Analysis
+
+- [Pricing Models and Cost Analysis](./pricing.md) - This document outlines the pricing models for LLMs and cloud services (e.g., AWS), detailing cost factors and optimization strategies for managing expenses within the AI Factory.
+- [LLM API Pricing Calculator](https://www.helicone.ai/llm-cost) - Calculate the cost of using AI models with Helicone's free pricing tool.
+- [genai-prices](https://github.com/pydantic/genai-prices)
