@@ -24,6 +24,7 @@
 - [OpenAgents](https://github.com/darrenhinde/OpenAgents) - minor steroid injection
 
 ## cursor
+- [cursor-commands](https://github.com/hamzafer/cursor-commands) - some prebuilt commands for your cursor
 - [awesome-cursor](https://github.com/hao-ji-xing/awesome-cursor) - A curated collection of tools and resources for Cursor.
 - [cursor.directory](https://cursor.directory/)
 - [vibe-tools](https://github.com/eastlondoner/vibe-tools)
