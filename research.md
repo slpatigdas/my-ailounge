@@ -1,13 +1,14 @@
 # 🚦 Priority Lane
 
+- check out the AI [landscape](https://tracxn.com/d/companies/zhipu/__vs60BhIzHeRwBtLTuoj841aSKyol6J8LYhHaTVGDSrU#about-the-company)
+
 # 🛠️ IDE / Coding Agents
 *who should you work with? pick your poison*
 - [opencode](https://opencode.ai/) - The open source AI coding agent
 - [google gemini cli](https://geminicli.com/) - we have free tier and daily consumables
-- [claude code](https://claude.com/product/claude-code)
+- [claude code](https://claude.com/product/claude-code) - Work with Claude directly in your codebase. Build, debug, and ship from your terminal, IDE, Slack, or the web. Describe what you need, and Claude handles the rest.
 
-- [cursor]()
-- [vscode]()
+- [cursor](https://cursor.com/download) - AI-powered code editor that understands your codebase and helps you code faster through natural language. Just describe what you want to build or change and Cursor will generate the code for you.
 - [zed](https://zed.dev/)
 - [lovable](lovable.dev) - the basic bitch. generating entire landing pages, basic pages, and emails/html
 
@@ -43,18 +44,19 @@
     - [https://arxiv.org/abs/2404.02060](https://arxiv.org/abs/2404.02060)
 - [context-rot-the-emerging-challenge](https://www.understandingai.org/p/context-rot-the-emerging-challenge)
 - [context benchmarked](https://www.letta.com/blog/context-bench)
-- [the million context scam](https://www.reddit.com/r/LocalLLaMA/comments/1mq19x6/1_million_context_is_the_scam_the_ai_start/
+- the million context [scam](https://www.reddit.com/r/LocalLLaMA/comments/1mq19x6/1_million_context_is_the_scam_the_ai_start/)
+- zhipu [prompt-engineering](https://docs.bigmodel.cn/cn/coding-plan/best-practice/prompt-engineering)
 
 ## 📚 Benchmarks / Leaderboards
 
 - [benchmarks](https://artificialanalysis.ai/models/kimi-k2) - all ai model general benchmarks here
+- zAI [list] 🇨🇳(https://huggingface.co/zai-org)
 - [Nejumi Dashboard](https://nejumi.ai/) 🇯🇵 - Nejumi Leaderboard evaluates response consistency by testing JMMLU with multiple patterns (standard method, symbolic choices, selecting non-correct answers)
 - [Nejumi Dashboard - Legacy](https://wandb.ai/wandb-japan/llm-leaderboard) 🇯🇵 - See how leading models stack up across text, image, vision, and beyond. This page gives you a snapshot of each Arena, you can explore deeper insights in their dedicated tabs.
 - [korea ](https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard) 🇰🇷
-- [llm-arena](https://lmarena.ai/leaderboard)
+- [llm-arena](https://lmarena.ai/leaderboard) 🌎🌏🌍
 - [seed bytedance](https://seed.bytedance.com/en/blog/the-doubao-seed-team-open-sources-new-benchmark-for-code-large-models-covering-over-11-real-world-programming-scenarios-for-the-first-time)
-- [Berkeley Function-Calling Leaderboard](https://gorilla.cs.berkeley.edu/leaderboard.html)
-
+- [Berkeley Function-Calling Leaderboard](https://gorilla.cs.berkeley.edu/leaderboard.html) 🇺🇸
 
 # 🗂️ MCPs
 
@@ -63,7 +65,6 @@
 - [awesome-mcp-servers](https://github.com/wong2/awesome-mcp-servers) - Curated Model Context Protocol (MCP) servers.
 - [sentry mcp](https://docs.sentry.io/product/sentry-mcp/)
 - [context7](https://context7.com) - band aid solution for mcps
-
 
 ## others
 
