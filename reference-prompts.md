@@ -1,3 +1,56 @@
+# How to start:
+
+```mermaid
+graph TD
+    %% --- Nodes ---
+    EPIC[Start: EPIC PLAN]
+
+    %% Branch 1
+    GP1[General Plan A]
+    SP1_A[Specific Plan A.1]
+    SP1_B[Specific Plan A.2]
+    T1[Task: Setup Env]
+    T2[Task: Config DB]
+    T3[Task: Create API]
+
+    %% Branch 2
+    GP2[General Plan B]
+    SP2_A[Specific Plan B.1]
+    SP2_B[Specific Plan B.2]
+    T4[Task: UI Mockups]
+    T5[Task: Frontend Auth]
+    T6[Task: Landing Page]
+
+    %% --- Connections ---
+    EPIC --> GP1
+    EPIC --> GP2
+
+    %% General Plan A Breakdown
+    GP1 --> SP1_A
+    GP1 --> SP1_B
+    SP1_A --> T1
+    SP1_A --> T2
+    SP1_B --> T3
+
+    %% General Plan B Breakdown
+    GP2 --> SP2_A
+    GP2 --> SP2_B
+    SP2_A --> T4
+    SP2_B --> T5
+    SP2_B --> T6
+
+    %% --- Styling ---
+    classDef epic fill:#212121,stroke:#000,stroke-width:2px,color:#fff
+    classDef general fill:#1565C0,stroke:#0D47A1,stroke-width:2px,color:#fff
+    classDef specific fill:#43A047,stroke:#1B5E20,stroke-width:2px,color:#fff
+    classDef task fill:#FAFAFA,stroke:#333,stroke-width:1px,color:#000
+
+    class EPIC epic
+    class GP1,GP2 general
+    class SP1_A,SP1_B,SP2_A,SP2_B specific
+    class T1,T2,T3,T4,T5,T6 task
+```
+
 # Reference Prompts for AI Agents (Django, Celery, DRF)
 
 ## Architecture Sanity Before You Code

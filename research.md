@@ -17,6 +17,7 @@
 ## opencode
 - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode) - massive steroid injection; just **do not** setup the **auth providers** because they are failing as of 12-21-2025
 - full list of opencode [plugins](https://opencode.ai/docs/ecosystem#plugins)
+- oh-my-opencode agent model [alternatives](./oh-my-opencode-models.md)
 
 ## cursor
 - [cursor-commands](https://github.com/hamzafer/cursor-commands) - some prebuilt commands for your cursor
@@ -25,6 +26,9 @@
 
 ### Vibe Coding
 - [vibe-tools](https://github.com/eastlondoner/vibe-tools)
+
+### Limits
+- [https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan#h_50f6dec29d](https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan#h_50f6dec29d)
 
 
 # 📰 Articles
@@ -72,14 +76,9 @@
 - [context7](https://context7.com) - band aid solution for mcps
 
 ## others
-
-- [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects?tab=readme-ov-file) - Collection of AI agent use cases across industries.
-- [boazcstrike's list](https://github.com/boazcstrike/boazcstrike/blob/main/github-repos.md)
-
 - [aider](https://aider.chat/)
 - [construct](https://github.com/furisto/construct) - API-first multi-agent coding assistant with CodeAct tool calling and first-class terminal support.
 - [Warp Docs](https://docs.warp.dev/) - Official Warp documentation (Agentic Development Environment, Warp AI, agents, Warp Drive).
-- zAI [list](https://huggingface.co/zai-org) 🇨🇳
 
 # 🛡️ Security
 
