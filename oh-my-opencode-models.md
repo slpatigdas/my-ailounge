@@ -1,87 +1,96 @@
-## oh-my-opencode Agent Model Guide
+# Oh-My-OpenCode Agent Model Guide
 
-Below are the recommended agent "roles," their current default models, and strong alternatives by use case.
-
----
-
-### 1. **Sisyphus (The Orchestrator)**
-- **Role:** Task decomposition, aggressive parallel planning, reasoning loops.
-- **Current Model:** `anthropic/claude-opus-4-5`
-- **Mix of Alternatives:**
-  - **openai/o3-high (Reasoning):** Specialist for pure logic and planning; excels at complex dependency graphs during the planning phase.
-  - **deepseek/deepseek-v3.2-speciale:** Open-weight champion, on par with Gemini 3 Pro for agentic reasoning at a much lower cost; great for sub-loops to save budget.
-  - **moonshot/kimi-k2-thinking:** Excels at "Chain of Thought" (CoT) reasoning over long horizons; ideal for maintaining agent focus.
+This document provides an in-depth overview of recommended agent "roles," their primary default models, and alternative options tailored for different use cases. It serves as a resource for selecting the ideal AI model to optimize performance and efficiency in your workflows.
 
 ---
 
-### 2. **Oracle (The Architect)**
-- **Role:** Code review, deep logic, architectural strategy.
-- **Current Model:** `openai/gpt-5.2`
-- **Mix of Alternatives:**
-  - **anthropic/claude-opus-4.5:** Superior for reviewing huge diffs; often catches subtle bugs in large PRs.
-  - **google/gemini-3-pro:** Massive 2M+ token context window for whole-architecture reasoning and cross-module understanding.
-  - **meta/llama-4-405b-instruct:** Best local/privacy-focused architect for sensitive IP within a VPC.
+## 1. **Sisyphus (The Orchestrator)**
+
+- **Role**: Task decomposition, aggressive parallel planning, and reasoning loops.
+- **Current Model**: `anthropic/claude-opus-4-5`
+- **Alternative Models**:
+  - **OpenAI o3-high (Reasoning)**: Excels in pure logic and planning, ideal for complex dependency graphs.
+  - **DeepSeek V3.2 Speciale**: Open-weight model offering agentic reasoning comparable to Gemini 3 Pro, at a more economical rate.
+  - **Moonshot Kimi-K2 Thinking**: Specializes in long-horizon "Chain of Thought (CoT)" reasoning and maintaining agent focus.
 
 ---
 
-### 3. **Librarian (The Researcher)**
-- **Role:** Multi-repo analysis, doc lookup, evidence-based answers.
-- **Current Model:** `anthropic/claude-sonnet-4-5`
-- **Mix of Alternatives:**
-  - **google/gemini-3-flash:** Huge, cheap context window—ideal for massive doc reading.
-  - **cohere/command-r7-plus:** RAG-optimized; reduces hallucinations in citation-heavy "vector search" workflows.
-  - **perplexity/sonar-huge-online:** Real-time web access, great for live research (e.g., recent GitHub issues).
+## 2. **Oracle (The Architect)**
+
+- **Role**: Code review, deep logic development, and architectural strategy.
+- **Current Model**: `openai/gpt-5.2`
+- **Alternative Models**:
+  - **Claude Opus 4.5**: Exceptional at analyzing large diffs, and identifying subtle issues in extensive pull requests.
+  - **Gemini 3 Pro**: Offers unparalleled architecture-level reasoning facilitated by its 2M+ token context window for cross-module integration.
+  - **Llama 4 405B Instruct**: A privacy-forward local model optimized for internal and secure use.
 
 ---
 
-### 4. **Explore (The Scout)**
-- **Role:** Fast file traversal, pattern matching, low latency.
-- **Current Model:** `opencode/grok-code` (likely Grok 3/4 based)
-- **Mix of Alternatives:**
-  - **meta/llama-4-scout:** Ultra-fast specialized model (8B–15B param) for "grep-like" intelligence.
-  - **anthropic/claude-haiku-4.5:** Speedster with superior code understanding in complex languages (Rust/C++).
-  - **mistral/ministral-8b-code:** Runs locally for low-latency, edge-based agentic exploration.
+## 3. **Librarian (The Researcher)**
+
+- **Role**: Multi-repo analysis, document lookup, evidence-based answers.
+- **Current Model**: `anthropic/claude-sonnet-4-5`
+- **Alternative Models**:
+  - **Gemini 3 Flash**: Cost-effective with a significant context window for processing extensive documentation.
+  - **Cohere Command R7 Plus**: Optimized for Retrieval-Augmented Generation (RAG), minimizing hallucinations during citation-heavy workflows.
+  - **Perplexity Sonar Huge Online**: Features real-time web access to support live research on dynamic platforms (e.g., GitHub issues).
 
 ---
 
-### 5. **Frontend-UI-UX-Engineer (The Designer)**
-- **Role:** Visual code generation, React/Tailwind expertise, aesthetic judgment.
-- **Current Model:** `google/gemini-3-pro-high`
-- **Mix of Alternatives:**
-  - **anthropic/claude-sonnet-4.5:** The "artifact" specialist—great at CSS/layout reasoning and UI spatial awareness.
-  - **openai/gpt-5.2-vision:** More "pixel-perfect" than Gemini for converting visuals to code.
-  - **blackbox/flux-coder-v2:** Trained specifically on frontend frameworks (Next.js, Vue, etc.), up-to-date with latest APIs.
+## 4. **Explore (The Scout)**
+
+- **Role**: Rapid file traversal, pattern matching, and low-latency search.
+- **Current Model**: `opencode/grok-code`
+- **Alternative Models**:
+  - **Llama 4 Scout**: Ultra-fast specialized model designed for efficient pattern-matching and intelligence.
+  - **Claude Haiku 4.5**: Offers superior speed and understanding, particularly effective in complex languages like Rust and C++.
+  - **Mistral Ministral-8B-Code**: A lightweight, locally deployable model offering optimized low-latency exploration.
 
 ---
 
-### 6. **Document-Writer (The Wordsmith)**
-- **Role:** Technical prose, release notes, READMEs.
-- **Current Model:** `google/gemini-3-flash`
-- **Mix of Alternatives:**
-  - **anthropic/claude-opus-4 (Legacy):** Preferred "voice" for documentation—less robotic, warmer tone.
-  - **qwen/qwen-3-creative:** Leaderboard topper for creative/DevRel style writing.
-  - **openai/gpt-4.5-pro-creative:** The go-to for branded, witty, and professional documentation.
+## 5. **Frontend-UI-UX-Engineer (The Designer)**
+
+- **Role**: Visual interface generation, emphasis on React/Tailwind expertise, and aesthetic judgment.
+- **Current Model**: `google/gemini-3-pro-high`
+- **Alternative Models**:
+  - **Claude Sonnet 4.5**: Excels at CSS and UI layout tasks with advanced aesthetic reasoning.
+  - **OpenAI GPT-5.2 Vision**: Specializes in converting wireframes and visuals into pixel-perfect code.
+  - **Blackbox Flux Coder V2**: Focused on frontend frameworks such as Next.js and Vue.js, with knowledge of modern API practices.
 
 ---
 
-### 7. **Multimodal-Looker (The Visionary)**
-- **Role:** Analyze diagrams, PDFs, architecture flowcharts.
-- **Current Model:** `google/gemini-3-flash`
-- **Mix of Alternatives:**
-  - **openai/gpt-5-omni:** First-class simultaneous audio/video/text input; can handle complex multimodal tasks (e.g., fix-from-video-bug reproducibility).
-  - **qwen/qwen-2.5-vl-72b:** Open-weight OCR giant; outperforms in technical document/diagram understanding.
-  - **xai/grok-vision-beta:** Especially strong at "dense" information: server log screenshots, dashboards, etc.
+## 6. **Document-Writer (The Wordsmith)**
+
+- **Role**: Technical documentation, release notes, and README creation.
+- **Current Model**: `google/gemini-3-flash`
+- **Alternative Models**:
+  - **Claude Opus 4 (Legacy)**: Favorable for documentation with a warmer, less robotic tone.
+  - **Qwen 3 Creative**: Recognized for creative writing and developer relations-style prose.
+  - **OpenAI GPT-4.5 Pro Creative**: Specializes in creating branded, witty, and professional documentation.
 
 ---
 
-## **Summary Table: The 2025 Agent Mix**
+## 7. **Multimodal-Looker (The Visionary)**
 
-| Agent Role      | Primary Model             | Best High-IQ Alternative      | Best Speed/Cost Alternative    |
-|-----------------|--------------------------|------------------------------|-------------------------------|
-| **Sisyphus**    | Claude Opus 4.5          | OpenAI o3 (Reasoning)        | DeepSeek V3.2 (Budget)        |
-| **Oracle**      | GPT-5.2                  | Gemini 3 Pro (Context)       | Llama 4 405B (Privacy)        |
-| **Librarian**   | Claude Sonnet 4.5        | Gemini 3 Flash (Context)     | Command R7+ (RAG)             |
-| **Explore**     | Grok Code                | Claude Haiku 4.5             | Llama 4 Scout                 |
-| **Frontend**    | Gemini 3 Pro             | Claude Sonnet 4.5            | GPT-5.2 Vision                |
-| **Writer**      | Gemini 3 Flash           | Claude Opus 4 (Legacy)       | Qwen 3 Creative               |
-| **Multimodal**  | Gemini 3 Flash           | GPT-5 Omni                   | Qwen 2.5-VL                   |
+- **Role**: Analyze complex diagrams, PDFs, and architecture flowcharts.
+- **Current Model**: `google/gemini-3-flash`
+- **Alternative Models**:
+  - **OpenAI GPT-5 Omni**: Best for handling multimodal tasks such as combining audio/video/text inputs to resolve intricate problems.
+  - **Qwen 2.5 VL**: A technical powerhouse for OCR and diagram analysis.
+  - **XAI Grok Vision Beta**: Designed to deal with dense information such as server logs, screenshots, and system dashboards.
+
+---
+
+## Summary Table: The 2025 Agent Mix
+
+| **Agent Role**       | **Primary Model**       | **High-IQ Alternative**        | **Speed/Cost Alternative**        |
+|-----------------------|-------------------------|---------------------------------|------------------------------------|
+| **Sisyphus**         | Claude Opus 4.5         | OpenAI o3 (Reasoning)          | DeepSeek V3.2 Speciale            |
+| **Oracle**           | GPT-5.2                 | Gemini 3 Pro (Contextual Reasoning) | Llama 4 405B (Privacy-Conscious)   |
+| **Librarian**        | Claude Sonnet 4.5       | Gemini 3 Flash (Massive Context)| Command R7 Plus (RAG Optimization) |
+| **Explore**          | Grok Code               | Claude Haiku 4.5               | Llama 4 Scout                     |
+| **Frontend Designer**| Gemini 3 Pro            | Claude Sonnet 4.5              | GPT-5.2 Vision                    |
+| **Document Writer**  | Gemini 3 Flash          | Claude Opus 4 (Legacy)         | Qwen 3 Creative                   |
+| **Multimodal Analyst**| Gemini 3 Flash         | GPT-5 Omni                     | Qwen 2.5 VL                       |
+
+This document provides a complete framework for understanding and choosing the best AI coding and research models based on specific roles and tasks. It emphasizes balance between performance, cost, and specialized functionalities.
