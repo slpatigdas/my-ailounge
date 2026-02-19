@@ -1,4 +1,12 @@
-# How to start:
+# Reference Prompts for AI Agents
+
+This document presents workflows, prompts, and guidelines designed to optimize the use of AI agents in software development. These examples are targeted at applications involving Django, Celery, Django REST Framework (DRF), and related technologies. It also includes a visual plan diagram for starting projects effectively.
+
+---
+
+## How to Start a Project
+
+Below is a high-level visual workflow using a mermaid diagram to help you break down tasks and align your plans efficiently:
 
 ```mermaid
 graph TD
@@ -51,38 +59,107 @@ graph TD
     class T1,T2,T3,T4,T5,T6 task
 ```
 
-# Reference Prompts for AI Agents (Django, Celery, DRF)
+---
 
-## Architecture Sanity Before You Code
-"Read @file:docs/api.md and the `urls.py` files in each Django app. List 3–5 design risks (coupling, caching, auth). For each, show the minimal change that reduces risk and link to lines by @file#line. Return a prioritized plan and an estimate of touched files."
+## Core Prompts and Best Practices
 
-*Why it works:* scopes the assistant to concrete files + a small, ranked plan. Review diffs in the VS Code panel before applying.
+The following prompts are designed for specific scenarios to maximize efficiency and accuracy in development workflows.
 
-## API Contract → Server + Client Glue
-"From @file:api/users/openapi.yaml, generate Django REST Framework serializers and viewsets, and a typed client. Include validation, error mapping, and tests. Keep each change in a separate patch."
+### **Architecture Sanity Before You Code**
 
-*Keeps PRs readable:* pair with a slash command like `/api-from-openapi users`.
+**Prompt:**
+> "Read @file:docs/api.md and the `urls.py` files in each Django app. List 3–5 design risks (e.g., coupling, caching, authentication). For each, show the minimal change that reduces risk and link to lines by @file#line. Return a prioritized plan and an estimate of touched files."
 
-## DB Migration with Guardrails
-"Audit `users/migrations/0001_initial.py` for encoding, indexing, and rollback risks. If safe, propose a patch; else output a checklist. Generate a verification script that samples rows and asserts invariants."
+**Why it works:**
+- Scopes the assistant to specific files.
+- Generates a concise, ordered action plan for fixes.
+- Allows review of diffs in the IDE before committing changes.
 
-*Store this as* `/scan-migration`. I approve the verification script first, then the patch.
+---
 
-## Security Pass (Fast)
-"Run a security review on the current diff. Flag auth boundaries (e.g., `permissions.py`, custom authentication classes), cookie/CSRF settings, header parsing, and secret exposure. Provide line-anchored fixes with rationale."
+### **API Contract → Server + Client Glue**
 
-*Note:* There’s also an official security reviewer and GitHub Action if you want CI comments on PRs with suggested remediations.
+**Prompt:**
+> "From @file:api/users/openapi.yaml, generate Django REST Framework serializers and viewsets, and a typed client. Include validation, error mapping, and tests. Keep each change in a separate patch."
 
-## Tests That Pay Rent
-"Given changes in `payments/` (e.g., `models.py`, `views.py`, `tasks.py`), propose table-driven tests that cover nulls, timeouts, idempotency, and retries for both synchronous and Celery asynchronous operations. Prefer failing first, then provide patches to make them pass."
+**Why it works:**
+- Keeps pull requests limited and readable.
+- Encourages automated processes with minimal manual intervention.
 
-*Bundle as* `/write-tests payments`.
+---
 
-## Perf Triage Without Yolo Optimizations
-"Profile the hot path in `orders/views.py` or a critical Celery task in `orders/tasks.py`. Identify 2 bottlenecks with line refs, estimate complexity, and propose the smallest safe improvement. Don’t micro-optimize; aim for p95 wins."
+### **Database Migration with Guardrails**
 
-## Frontend Event Hygiene
-"Scan modified React components. Ensure analytics events map to @file:analytics/events.md. Generate a diff to add missing events and assert payload shapes in tests."
+**Prompt:**
+> "Audit `users/migrations/0001_initial.py` for encoding, indexing, and rollback risks. If safe, propose a patch; else output a checklist. Generate a verification script that samples rows and asserts invariants."
 
-## PR Ready-to-Merge Summary
-"Summarize this PR in 5 bullets: problem, approach, risks, tests, rollout. If risky, suggest a feature flag and rollback plan."
+**Why it works:**
+- Verifies migration safety before applying.
+- Enables quicker human review via verification scripts.
+
+---
+
+### **Security Pass (Fast)**
+
+**Prompt:**
+> "Run a security review on the current diff. Flag authentication boundaries (e.g., `permissions.py`, custom authentication classes), cookie/CSRF settings, header parsing, and secret exposure. Provide line-anchored fixes with rationale."
+
+**Why it works:**
+- Mitigates common security flaws efficiently.
+- Can be paired with CI tools for continuous security monitoring.
+
+---
+
+### **Tests That Pay Rent**
+
+**Prompt:**
+> "Given changes in `payments/` (e.g., `models.py`, `views.py`, `tasks.py`), propose table-driven tests that cover nulls, timeouts, idempotency, and retries for both synchronous and Celery asynchronous operations. Prefer failing first, then provide patches to make them pass."
+
+**Why it works:**
+- Uses table-driven testing for robust coverage.
+- Supports modern testing practices and CI/CD integration.
+
+---
+
+### **Performance Triage Without Over-Optimization**
+
+**Prompt:**
+> "Profile the hot path in `orders/views.py` or a critical Celery task in `orders/tasks.py`. Identify 2 bottlenecks with line references, estimate complexity, and propose the smallest safe improvement. Don’t micro-optimize; aim for p95 wins."
+
+**Why it works:**
+- Focuses on the most significant performance bottlenecks.
+- Avoids unnecessary micro-optimizations that may add technical debt.
+
+---
+
+### **Frontend Event Hygiene**
+
+**Prompt:**
+> "Scan modified React components. Ensure analytics events map to @file:analytics/events.md. Generate a diff to add missing events and assert payload shapes in tests."
+
+**Why it works:**
+- Streamlines developer efforts in maintaining analytics consistency.
+- Ensures traceable and testable analytics.
+
+---
+
+### **PR Ready-to-Merge Summary**
+
+**Prompt:**
+> "Summarize this PR in 5 bullet points: problem, approach, risks, tests, rollout. If risky, suggest a feature flag and rollback plan."
+
+**Why it works:**
+- Creates clear, actionable PR summaries.
+- Encourages thorough planning for merging and rollback procedures.
+
+---
+
+## General Guidelines
+
+- **Focus on Context:** Always provide specific file references and keep tasks scoped for efficiency.
+- **Modular Changes:** Avoid large monolithic modifications; break changes into manageable patches for clarity.
+- **Prioritize Safety:** Follow best practices for security, testing, and performance to minimize risks.
+
+---
+
+This document serves as a starting point for leveraging AI assistance effectively in coding, security, testing, and performance tuning tasks.
