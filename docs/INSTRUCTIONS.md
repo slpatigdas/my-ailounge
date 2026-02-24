@@ -344,15 +344,15 @@ Instead of manually managing API keys, we use OAuth-style flows for easy authent
 
 #### For Other Providers:
 
-If you need to connect to other AI providers (Anthropic, OpenAI, etc.), install their respective OAuth plugins:
+If you need to connect to other AI providers (Anthropic, OpenAI, etc.), the exact authentication steps will depend on your organization's tooling and the provider's official documentation.
+
+The following commands are **illustrative placeholders only** showing how `opencode` *might* be used to log in to different providers. Do **not** run these as-is; instead, replace them with the real commands from your actual toolchain and provider docs:
 
 ```bash
-# Example for Anthropic
-npm install -g @opencode/anthropic-oauth-plugin
+# Placeholder example for Anthropic (replace with real auth flow)
 opencode login anthropic
 
-# Example for OpenAI
-npm install -g @opencode/openai-oauth-plugin
+# Placeholder example for OpenAI (replace with real auth flow)
 opencode login openai
 ```
 
