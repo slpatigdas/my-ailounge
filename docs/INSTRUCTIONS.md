@@ -365,7 +365,7 @@ opencode requires you to choose models explicitly. Review our team's model strat
 - **Large Features:** Use `GPT-5.2` or `Claude 3.5 Sonnet`
 - **Quick Debugging:** Use `Gemini 2.5 Flash` or `GPT-4o`
 
-See the main [README.md](../README.md#best-model-per-role) for the complete model strategy.
+See [oh-my-opencode-models.md](../oh-my-opencode-models.md) for the complete model strategy.
 
 ### Step 5: Test opencode
 
