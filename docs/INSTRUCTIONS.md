@@ -793,7 +793,7 @@ Read the main [README.md](../README.md) to understand:
 ### 4. Learn Model Selection
 
 Understand which model to use when:
-- Review the [model strategy table](../README.md#best-model-per-role)
+- Review the [model strategy table](../oh-my-opencode-models.md)
 - Start with recommended models for your tasks
 - Ask your team when unsure
 
