@@ -332,32 +332,15 @@ You should see a version number like `1.2.3`
 
 ### Step 3: Authenticate with OAuth (Simple Way)
 
-Instead of manually managing API keys, we use OAuth plugins for easy authentication.
+Instead of manually managing API keys, we use OAuth-style flows for easy authentication.
 
-#### For Gemini (Recommended):
+> **Note:** The `opencode` CLI and its OAuth plugins in this section are **examples/placeholders** to illustrate a typical OAuth-based workflow. Replace the commands and package names below with the actual tools and plugins used in your environment, or follow your vendor’s official setup guide.
 
-1. **Install the Gemini OAuth plugin:**
+#### For Gemini (Example Workflow):
+
+1. **Install your Gemini OAuth plugin (example):**
    ```bash
-   npm install -g @opencode/gemini-oauth-plugin
-   ```
-
-2. **Login with OAuth:**
-   ```bash
-   opencode login gemini
-   ```
-
-3. **Follow the browser prompts:**
-   - A browser window will open
-   - Sign in with your Google account
-   - Authorize opencode to access Gemini
-   - Return to the terminal
-
-4. **Verify authentication:**
-   ```bash
-   opencode auth status
-   ```
-
-> **Expected:** You should see "Authenticated: ✓ Gemini"
+   npm install -g <your-gemini-oauth-plugin>
 
 #### For Other Providers:
 
