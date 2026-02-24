@@ -61,7 +61,7 @@ If not installed, download from: https://code.visualstudio.com/
 ### Required Accounts
 
 - **GitHub Account** - Sign up at https://github.com/signup
-- **Educational Email** - You'll need a `.edu` email address OR employer email for educational benefits
+- **Educational Email** - For GitHub Education benefits, you'll need a verified academic email (e.g., a `.edu` address or an accredited educational institution domain); non-educational employer emails generally do not qualify
 - **Google Account** - You can use an existing account or create one at https://accounts.google.com/
 
 ### Verification Checklist
