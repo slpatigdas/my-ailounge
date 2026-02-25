@@ -22,3 +22,11 @@
 3. **[OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB)**: Financial data platform for analysts, quants and AI agents.
 4. **[muratcankoylan/Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)**: A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.
 5. **[f/prompts.chat](https://github.com/f/prompts.chat)**: f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.
+
+## Trending on 2026-02-25
+
+1. **[huggingface/skills](https://github.com/huggingface/skills)**: No description provided.
+2. **[muratcankoylan/Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)**: No description provided.
+3. **[OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB)**: No description provided.
+4. **[LadybirdBrowser/ladybird](https://github.com/LadybirdBrowser/ladybird)**: No description provided.
+5. **[x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)**: No description provided.
