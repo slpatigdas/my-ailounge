@@ -78,3 +78,11 @@
 3. **[anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)**: No description provided.
 4. **[ruvnet/ruflo](https://github.com/ruvnet/ruflo)**: No description provided.
 5. **[alibaba/OpenSandbox](https://github.com/alibaba/OpenSandbox)**: No description provided.
+
+## Trending on 2026-03-04
+
+1. **[msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents)**: No description provided.
+2. **[ruvnet/RuView](https://github.com/ruvnet/RuView)**: No description provided.
+3. **[K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)**: No description provided.
+4. **[moeru-ai/airi](https://github.com/moeru-ai/airi)**: No description provided.
+5. **[CodebuffAI/codebuff](https://github.com/CodebuffAI/codebuff)**: No description provided.
