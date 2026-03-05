@@ -97,8 +97,8 @@ The ecosystem fosters a research-driven workflow. Access benchmarks, live leader
 ## Usage Guide
 
 ### Getting Started
-1. Read the [Agent Overview](./docs/agents.md).
-2. Explore the `/agents` folder for predefined templates.
+1. Read the [Role Definitions](./docs/oh-my-opencode-models.md) to understand available agents.
+2. Explore the `/src` folder for predefined templates and implementation examples.
 3. Create your first agent using the provided scaffold.
 
 ---
