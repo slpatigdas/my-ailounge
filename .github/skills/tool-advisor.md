@@ -16,7 +16,8 @@ Acts as the strategic dispatcher for the AI Factory. When given a project prompt
 ## Instructions
 1. **Analyze the Prompt:** Review the user's task, goal, and any provided context or constraints.
 2. **Consult the Arsenal:** Cross-reference the task requirements with the available resources documented in the `/docs/` folder, specifically the "Best Model for role" documentation.
-3. **Draft the Strategy:** * **Recommend Models:** Suggest the specific AI persona(s) best suited for the job (e.g., Senior Developer, QA Tester, Copywriter).
+3. **Draft the Strategy:**
+    * **Recommend Models:** Suggest the specific AI persona(s) best suited for the job (e.g., Senior Developer, QA Tester, Copywriter).
     * **Recommend Tools:** Identify any specific internal Agent Skills (e.g., File Architect, Mermaid Architect) or external tools needed.
     * **Define the Orchestration Pattern:** Outline the step-by-step flow. (e.g., "Step 1: Use Vibe Testing to validate requirements. Step 2: Use Mermaid Architect to map the flow. Step 3: Assign the Senior Developer model to write the code.")
 4. **Output the Recommendation:** Present the strategy in a clean, scannable format for the user to review and approve.
